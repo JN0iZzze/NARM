@@ -1,24 +1,26 @@
 define([
   // Standard Libs
-  'Console'      // lib/console/console
-  , 'Underscore' // lib/underscore/underscore
+  'Console',      // lib/console/console
+  'Underscore',   // lib/underscore/underscore
 
   // routing
-  , 'routes/routes'
+  'routes/routes',
 
   // Application Controller
-  , 'controllers/AppController'
-  , 'controllers/HomeController'
-  , 'controllers/DataController'
+  'controllers/AppController',
+  'controllers/HomeController',
+  'controllers/DataController',
+  'controllers/UserController'
 
-], function (Console, _, routes, app, home,data) {
+], function (Console, _, routes, app, home, data, user) {
   "use strict";
   Console.group("Entering controllers module.");
   Console.info("AppController", app);
 
   var controllers = {
     home: home,
-    data: data
+    data: data,
+    user: user
   };
 
 
@@ -31,9 +33,9 @@ define([
         $routeProvider.when(
           value.route
           , {
-            template: value.template
-            , controller: value.controller
-            , title: value.title
+            template: value.template,
+            controller: value.controller,
+            title: value.title
           }
         );
       });
@@ -45,13 +47,13 @@ define([
         Console.debug("Navigating to   ", next);
       });
     });
-  }
+  };
 
   var initialize = function(angModule) {
     angModule.controller('AppController', app);
     _.each(controllers,function(controller,name){
       angModule.controller(name, controller);
-    })
+    });
     setUpRoutes(angModule);
     Console.info("Registered Controllers: ", controllers);
   };

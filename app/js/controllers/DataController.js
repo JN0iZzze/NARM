@@ -7,9 +7,9 @@ define(['Console'], function (Console) {
 
     $scope.queue = DataService.query();
     $scope.queueHead = {
-      id: 'ID'
-      , status: 'Status'
-      , name: 'Name'
+      id: 'ID',
+      status: 'Status',
+      name: 'Name'
     };
 
     $scope.orderByCol = 'id';

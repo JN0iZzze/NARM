@@ -1,0 +1,10 @@
+<div>
+
+    <h2>All users ({{ users.length }})</h2>
+    <ul>
+        <li ng-repeat="user in users | limitTo: 10"><a href="javascript:void(0)" ng-click="edit(user._id)">edit</a> - <a href="javascript:void(0)" ng-click="delete(user._id)">delete</a> {{ user.alias }}</li>
+    </ul>
+
+    <div ng-include src="'./templates/_form.html'" ng-show="isForm"></div>
+
+</div>

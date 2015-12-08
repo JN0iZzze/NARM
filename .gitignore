@@ -9,3 +9,6 @@ build.xml
 .hgflow
 .hgignore
 .sass-cache
+node_modules
+/.idea
+/tmpgi

@@ -1,0 +1,27 @@
+{
+  "name": "narm",
+  "version": "0.1.0",
+  "description": "Nodejs + Angular + Require + Mongo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "mongoose": "^4.2.9",
+    "total.js": "^1.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JN0iZzze/NARM.git"
+  },
+  "author": "JN0iZzze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JN0iZzze/NARM/issues"
+  },
+  "homepage": "https://github.com/JN0iZzze/NARM#readme"
+}

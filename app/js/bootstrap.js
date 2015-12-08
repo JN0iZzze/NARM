@@ -9,27 +9,27 @@ require.config({
     , templates:  './../templates'
   }
   , priority: [
-    "Console"
-    , "jQuery"
-    , "Underscore"
-    , "Angular"
+    "Console",
+    "jQuery",
+    "Underscore",
+    "Angular"
   ]
   , urlArgs: 'v=1.0'
 });
 
 require([
   // Standard Libs
-  'require'
-  , 'Console'
-  , 'jQuery'
-  , 'Underscore'
-  , 'Angular'
+  'require',
+  'Console',
+  'jQuery',
+  'Underscore',
+  'Angular'
 ], function (require, Console, $, _, angular) {
   Console.group("Bootstrap dependencies loaded. Starting bootstrap.");
-  Console.info("Console", Console);
-  Console.info("jQuery", $);
-  Console.info("Underscore: ", _);
-  Console.info("Angular: ", angular);
+  //Console.info("Console", Console);
+  //Console.info("jQuery", $);
+  //Console.info("Underscore: ", _);
+  //Console.info("Angular: ", angular);
 
   require(['app'], function (App) {
     Console.group("Starting bootstrap.");

@@ -1,0 +1,29 @@
+@{meta('title', 'description', 'keywords')}
+
+
+<div id="container">
+	<noscript>
+		<div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this application to display correctly.
+		</div>
+	</noscript>
+	<header>
+		<div class="content">
+			<h1>Angular + Require + Boilerplate</h1>
+			<h2 ng:bind-template="{{title}}">Loading...</h2>
+		</div>
+		<nav>
+			<ul>
+				<li ng:repeat="nav in navigation">
+					<a href="#{{nav.route}}">{{nav.title}}</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div id="main" role="main">
+		<ng:view></ng:view>
+	</div>
+	<footer>
+		<p>Copyright &copy; 2015 JN0iZzze</p>
+	</footer>
+</div>

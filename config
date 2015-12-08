@@ -1,0 +1,8 @@
+// PLEASE:
+// !!! Database is readonly !!!
+// This database uses also: https://github.com/totaljs/demo
+
+allow-compile-html					: false
+allow-compile-script				: false
+//database							: mongodb://localhost/totaldemo
+database							: mongodb://test:test@ds029979.mongolab.com:29979/totaldemo
